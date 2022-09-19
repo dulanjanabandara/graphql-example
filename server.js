@@ -21,6 +21,7 @@ app.use(
   graphqlHTTP({
     schema: schema, // this gives us the shape of our data
     rootValue: root,
+    graphiql: true, // enabling graphiql
   })
 );
 
