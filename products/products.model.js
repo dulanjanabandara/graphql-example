@@ -15,6 +15,18 @@ function getAllProducts() {
   return products;
 }
 
+function getProductByPrice(min, max) {
+  return products.filter(
+    (product) => product.price >= min && product.price <= max
+  );
+}
+
+function getProductById(id) {
+  return products.find((product) => id === product.id);
+}
+
 module.exports = {
   getAllProducts,
+  getProductByPrice,
+  getProductById,
 };
